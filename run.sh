@@ -199,7 +199,9 @@ workload_2_nodejs() {
 }
 
 workload_2_python() {
-  python3 /usr/bin/python_benchmark_cli/tests/perf/benchmarking.py --project "${PROJECT}" \
+  which python
+  which python3
+  python /usr/bin/python_benchmark_cli/tests/perf/benchmarking.py --project "${PROJECT}" \
                                                                                      --bucket "${BUCKET_NAME}" \
                                                                                      --test_type "range" \
                                                                                      --min_size "${OBJECT_SIZE}" \
