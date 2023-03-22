@@ -199,9 +199,8 @@ workload_2_nodejs() {
 }
 
 workload_2_python() {
-  which python
-  which python3
-  python /usr/bin/python_benchmark_cli/tests/perf/benchmarking.py --project "${PROJECT}" \
+  python3 -m pip install -e /usr/bin/python_benchmark_cli/
+  python3 /usr/bin/python_benchmark_cli/tests/perf/benchmarking.py --project "${PROJECT}" \
                                                                                      --bucket "${BUCKET_NAME}" \
                                                                                      --test_type "range" \
                                                                                      --min_size "${OBJECT_SIZE}" \
