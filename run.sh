@@ -199,7 +199,7 @@ workload_2_nodejs() {
 }
 
 workload_2_python() {
-  python3 -m pip install -e /usr/bin/python_benchmark_cli/
+  python3 -m pip install -q -e /usr/bin/python_benchmark_cli/
   python3 /usr/bin/python_benchmark_cli/tests/perf/benchmarking.py --project "${PROJECT}" \
                                                                                      --bucket "${BUCKET_NAME}" \
                                                                                      --test_type "range" \
